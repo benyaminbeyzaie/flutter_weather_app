@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_weather_app/screens/city_screen.dart';
 import 'package:flutter_weather_app/services/weather.dart';
 import 'package:flutter_weather_app/utils/constants.dart';
 
@@ -46,19 +47,22 @@ class _LocationScreenState extends State<LocationScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
                   FlatButton(
-                    onPressed: () {},
-                    child: Icon(
-                      Icons.near_me,
-                      size: 50.0,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 0,
+                      vertical: 15,
                     ),
-                  ),
-                  FlatButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (contex) {
+                        return CityScreen();
+                      }));
+                    },
                     child: Icon(
-                      Icons.location_city,
+                      Icons.pin_drop,
+                      color: Colors.white,
                       size: 50.0,
                     ),
                   ),
