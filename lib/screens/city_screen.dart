@@ -24,10 +24,13 @@ class _CityScreenState extends State<CityScreen> {
               Align(
                 alignment: Alignment.topLeft,
                 child: FlatButton(
-                  onPressed: () {},
+                  padding: EdgeInsets.symmetric(vertical: 10),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   child: Icon(
                     Icons.arrow_back_ios,
-                    size: 50.0,
+                    size: 40.0,
                   ),
                 ),
               ),
@@ -35,7 +38,9 @@ class _CityScreenState extends State<CityScreen> {
                 padding: EdgeInsets.all(20.0),
                 child: null,
               ),
-              FlatButton(
+              MaterialButton(
+                color: Colors.white,
+                padding: EdgeInsets.all(10),
                 onPressed: () {},
                 child: Text(
                   'Get Weather',
