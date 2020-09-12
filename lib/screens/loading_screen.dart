@@ -4,8 +4,7 @@ import 'package:flutter_weather_app/services/networking.dart';
 import 'package:flutter_weather_app/services/weather.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_weather_app/screens/location_screen.dart';
-
-const apiKey = 'd1da19ec8119361ce85b80bd0087c282';
+import 'package:flutter_weather_app/utils/constants.dart';
 
 class LoadingScreen extends StatefulWidget {
   @override
