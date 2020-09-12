@@ -1,6 +1,6 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:flutter_weather_app/services/waether_condition.dart';
+import 'package:flutter_weather_app/services/weather.dart';
 
 class NetworkHelper {
   final String _url;

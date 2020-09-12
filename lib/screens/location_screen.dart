@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather_app/services/waether_condition.dart';
 import 'package:flutter_weather_app/services/weather.dart';
 import 'package:flutter_weather_app/utils/constants.dart';
 

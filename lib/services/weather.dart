@@ -1,3 +1,4 @@
+import 'dart:convert';
 class WeatherModel{
   String getWeatherIcon(int condition) {
     if (condition < 300) {
@@ -31,4 +32,16 @@ class WeatherModel{
       return 'یه کت ببر بیرون شاید لازمت شد!';
     }
   }
+}
+class WeatherCondition {
+  final double temperature;
+  final int condition;
+  final String cityName;
+
+  WeatherCondition(this.temperature, this.condition, this.cityName);
+
+  WeatherCondition.fromJson(Map<String, dynamic> json)
+      : temperature = json['main']['temp'],
+        condition = json['weather'][0]['id'],
+        cityName = json['name'];
 }
